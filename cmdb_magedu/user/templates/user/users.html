@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>用户名</th>
+        <th>年龄</th>
+        <th>电话号码</th>
+        <th>邮箱地址</th>
+        <th>注册时间</th>
+        <th>登陆时间</th>
+        <th>操作</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for user in data %}
+        <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.telephone }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.register_time }}</td>
+            <td>{{ user.login_time }}</td>
+            <td>
+                <a>编辑</a>
+                <a>删除</a>
+            </td>
+        </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+</head>
+<body>
+
+用户登录:
+{% if errors %}
+    <span style="color: red;">{{ errors.0 }}</span>
+    {% for error in errors %}
+        <span style="color: red;">{{ error }}</span>
+    {% endfor %}
+{% endif %}
+
+<form action="{% url 'user:login' %}" method="POST">
+    {% csrf_token %}
+    用户名：<input type="text" name="name" value="{{ name }}"/>
+    密码：<input type="password" name="password" autocomplete="off"/>
+    <input type="submit" value="登陆"/>
+</form>
+
+</body>
+</html>
