@@ -8,3 +8,7 @@
 #
 # platforms.C_FORCE_ROOT = True  #加上这一行
 #
+
+from celery_learn.tasks import add
+
+add.delay(4, 4)
