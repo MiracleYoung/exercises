@@ -20,3 +20,13 @@ _stack.push(8.4)
 print(_stack.pop())
 print(_stack.pop())
 print(_stack.size())
+
+
+from python_data_structure.base_data_structure.queue import Queue
+
+_q = Queue()
+print(_q.is_empty())
+print(_q.enqueue(1))
+print(_q.enqueue(10))
+print(_q.dequeue())
+print(_q.size())

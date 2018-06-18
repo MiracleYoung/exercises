@@ -47,6 +47,7 @@ def infix2prefix(s: str):
 
     return ''.join(_ret)
 
+
 def postfix_math(s: str):
     _stack = Stack()
     _srclst = s.split()
@@ -63,6 +64,7 @@ def postfix_math(s: str):
 
     return _stack.pop()
 
+
 def calc(op, n1, n2):
     if op == '+':
         return n1 + n2
@@ -72,7 +74,6 @@ def calc(op, n1, n2):
         return n1 * n2
     else:
         return n1 / n2
-
 
 
 if __name__ == '__main__':
