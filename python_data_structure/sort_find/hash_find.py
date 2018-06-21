@@ -49,7 +49,21 @@ class HashTable:
         _data = None
         _stop, _found = False, False
         _pos = _startslot
-        while self.slots[]
+        while self.slots[_pos] != None and not _stop and not _found:
+            if self.slots[_pos] == key:
+                _found = True
+                _data = self.slots[_pos]
+            else:
+                _pos = self._rehash(_pos, len(self.slots))
+                if _pos == _startslot:
+                    _stop = True
+        return _data
+
+    def __getitem__(self, item):
+        return self.get(item)
+
+    def __setitem__(self, key, value):
+        self.put(key, value)
 
 
 if __name__ == '__main__':
